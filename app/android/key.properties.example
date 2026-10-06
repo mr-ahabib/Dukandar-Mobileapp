@@ -1,0 +1,24 @@
+# Copy this file to android/key.properties (git-ignored) and fill in your values.
+#
+# 1. Create the release keystore once (keep it SAFE – losing it means you can
+#    never update the app on the Play Store):
+#
+#    keytool -genkey -v -keystore ~/dukandar-release.jks -keyalg RSA \
+#        -keysize 2048 -validity 10000 -alias dukandar
+#
+# 2. Get the signing certificate SHA-256 (lowercase hex, no colons) and put it
+#    in AppConfig.expectedSignatureSha256 or pass --dart-define=DUKANDAR_SIG=...
+#
+#    keytool -list -v -keystore ~/dukandar-release.jks -alias dukandar | grep SHA256
+#    (remove the colons and lowercase it)
+#
+#    Also add the SHA-1 to the Google Cloud OAuth Android client for Drive backup.
+#
+# 3. Build:  flutter build apk --release --dart-define=DUKANDAR_API=https://api.example.com/api/v1 \
+#                --dart-define=DUKANDAR_SIG=<sha256hex>
+
+storePassword=CHANGE_ME
+keyPassword=CHANGE_ME
+keyAlias=dukandar
+# Path is relative to the android/ folder (or absolute).
+storeFile=../../dukandar-release.jks

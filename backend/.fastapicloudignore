@@ -1,0 +1,10 @@
+.venv/
+data/
+tests/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.db
+*.db-*
+.env
+dukandar_dev.db

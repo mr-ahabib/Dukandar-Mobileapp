@@ -1,0 +1,10 @@
+# docker build context = repo root; only backend/ and admin-panel/ are needed
+*
+!backend/
+!admin-panel/
+backend/.venv
+backend/.env
+backend/tests
+backend/**/__pycache__
+backend/.pytest_cache
+backend/.ruff_cache
