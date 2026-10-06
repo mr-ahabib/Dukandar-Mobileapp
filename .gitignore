@@ -70,3 +70,8 @@ backend/data/
 *.jks
 *.keystore
 google-services.json
+
+# Claude Code
+.claude/
+CLAUDE.md
+CLAUDE.local.md
